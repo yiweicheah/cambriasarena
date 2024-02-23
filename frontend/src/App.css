@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Enchanted Land";
+  src: url(./fonts/EnchantedLand-jnX9.ttf);
+}
+
+@font-face {
+  font-family: "Knight Warrior";
+  src: url(./fonts/KnightWarrior-w16n8.otf);
+}
+
+.app-div {
+  min-height: 100vh;
+}
+
+.body-div {
+  position: relative;
+}
+
+.page-bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 1;
+  width: 100%;
+  opacity: 0.7;
+  object-fit: cover;
+}

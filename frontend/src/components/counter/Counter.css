@@ -1,0 +1,10 @@
+.counter-div {
+  max-width: 800px;
+  margin: auto;
+}
+
+.counter-reset-btn {
+  background-color: red !important;
+  margin-top: 16px;
+  width: calc(100% - 20px) !important;
+}

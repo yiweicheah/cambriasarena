@@ -1,0 +1,17 @@
+.footer-div {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+.footer-disclaimer-text {
+  font-size: 12px !important;
+}
