@@ -1,5 +1,5 @@
 # Cambria's Arena
 
-# A health counter for Grand Archive TCG
+A health counter for Grand Archive TCG
 
-# Made with React
+Made with React
