@@ -1,6 +1,5 @@
 import "./Players.css";
 import { Group, Modal } from "@mantine/core";
-import useScreenSize from "../../hooks/useScreenSize";
 import { useState } from "react";
 import { isMobile } from "react-device-detect";
 
@@ -8,6 +7,7 @@ import swords from "./images/sword.png";
 import heal from "./images/regeneration.png";
 import undo from "./images/undo.png";
 import add from "./images/add.webp";
+import level from "./images/level.png";
 
 const Player1 = ({
   player1,
@@ -18,8 +18,6 @@ const Player1 = ({
   setCurrentChampions,
   championsListToShow,
 }) => {
-  const screenSize = useScreenSize();
-
   /*modal handler*/
   const [openedList, setOpenedList] = useState(false);
   const openList = () => setOpenedList(true);
@@ -27,9 +25,9 @@ const Player1 = ({
   /********************************************************/
 
   /*image style for champion*/
-  const championImgStyle = {
-    height: `${(screenSize.height - 70) / 2 - 100}px`,
-  };
+  // const championImgStyle = {
+  //   height: `${(screenSize.height - 70) / 2 - 100}px`,
+  // };
   /********************************************************/
 
   /*handler for image click*/
@@ -48,7 +46,7 @@ const Player1 = ({
       if (currentChampions.player1.level === 0) {
         setCurrentChampions({
           ...currentChampions,
-          player1: { level: -1, img: add, hp: 0 },
+          player1: { level: -1, img: add, hp: 0, imgName: "add.webp" },
         });
         setPlayer1({ ...player1, level0: null });
       }
@@ -100,31 +98,16 @@ const Player1 = ({
     closeList();
   };
 
+  console.log(currentChampions);
+
   return (
     <div className="players-outer-div">
       <div className={`players-div ${isMobile ? "mobile" : ""}`}>
-        {/* <Modal
-          opened={openedList}
-          onClose={closeList}
-          centered
-          zIndex="1000"
-          className="champions-list-modal mobile"
-          radius="15"
-        >
-          <div className="champions-list-div  player1">
-            {championsListToShow(currentChampions.player1)
-              .sort((a, b) => (a.label < b.label ? -1 : 1))
-              .map((champion, i) => (
-                <div
-                  key={i}
-                  onClick={() => handleChampionClick(champion.value)}
-                  className="champions-list"
-                >
-                  {champion.label}
-                </div>
-              ))}
-          </div>
-        </Modal>   */}
+        <img
+          src={require(`../../data/champions/images/${currentChampions.player1.imgName}`)}
+          alt="champion"
+          className="players-champion-bg player1"
+        />
         <Modal.Root
           opened={openedList}
           onClose={closeList}
@@ -162,39 +145,43 @@ const Player1 = ({
         </Modal.Root>
         <Group gap="0" className="players-group">
           <div className="players-box left">
-            <img
-              src={currentChampions.player1.img}
-              alt="add"
-              className={`players-champion-img ${
-                currentChampions.player1.level === 3 ? "level3" : ""
+            <div
+              className={`button-border ${
+                currentChampions.player1.level === 3 ? "hide" : "show"
               }`}
-              style={championImgStyle}
               onClick={handleImgClick}
-            />
-            <img
-              src={undo}
-              alt="undo"
-              className={`champion-delevel ${
+            >
+              <img src={level} alt="level" className="button-icon" />
+            </div>
+            <div
+              className={`button-border ${
                 currentChampions.player1.level === -1 ? "hide" : "show"
               }`}
               onClick={handleDelevel}
-            />
+            >
+              <img src={undo} alt="level" className="button-icon" />
+            </div>
+          </div>
+          <div className="players-box mid">
+            <Group gap="0" className="players-hp-div">
+              <div className="players-hp">{player1.dealtDmg}</div>
+              <div className="players-max-hp">
+                /{currentChampions.player1.hp}
+              </div>
+            </Group>
           </div>
           <div className="players-box right">
             <div
-              className="heal-atk-border player1"
-              onClick={() => handleHeal(player1, setPlayer1)}
-            >
-              <img src={heal} alt="heal" className="heal-atk-icon heal" />
-            </div>
-            <div className="players-hp">
-              {currentChampions.player1.hp - player1.damaged + player1.healed}
-            </div>
-            <div
-              className="heal-atk-border player1"
+              className="button-border player1"
               onClick={() => handleDamage(player1, setPlayer1)}
             >
-              <img src={swords} alt="attack" className="heal-atk-icon atk" />
+              <img src={swords} alt="attack" className="button-icon" />
+            </div>
+            <div
+              className="button-border player1"
+              onClick={() => handleHeal(player1, setPlayer1)}
+            >
+              <img src={heal} alt="heal" className="button-icon heal" />
             </div>
           </div>
         </Group>

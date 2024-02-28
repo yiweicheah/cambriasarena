@@ -14,7 +14,7 @@ export const level1 = [
     element: "norm",
     hp: 19,
     img: arisanna,
-    imgName: "arisanna-herbalist-prodigy",
+    imgName: "arisanna-herbalist-prodigy.jpg",
     lineage: "",
   },
   {
@@ -23,7 +23,7 @@ export const level1 = [
     element: "norm",
     hp: 19,
     img: diana,
-    imgName: "diana-keen-huntress",
+    imgName: "diana-keen-huntress.jpg",
     lineage: "",
   },
   {
@@ -32,7 +32,7 @@ export const level1 = [
     element: "norm",
     hp: 20,
     img: lorraine,
-    imgName: "lorraine-wandering-warrior",
+    imgName: "lorraine-wandering-warrior.jpg",
     lineage: "",
   },
   {
@@ -41,7 +41,7 @@ export const level1 = [
     element: "norm",
     hp: 19,
     img: rai,
-    imgName: "rai-spellcrafter",
+    imgName: "rai-spellcrafter.jpg",
     lineage: "",
   },
   {
@@ -50,7 +50,7 @@ export const level1 = [
     element: "norm",
     hp: 19,
     img: silvie,
-    imgName: "silvie-wilds-whisperer",
+    imgName: "silvie-wilds-whisperer.jpg",
     lineage: "",
   },
   {
@@ -59,7 +59,7 @@ export const level1 = [
     element: "",
     hp: 20,
     img: tonoris,
-    imgName: "tonoris-lone-mercenary",
+    imgName: "tonoris-lone-mercenary.jpg",
     lineage: "",
   },
   {
@@ -68,7 +68,7 @@ export const level1 = [
     element: "norm",
     hp: 19,
     img: zander,
-    imgName: "zander-prepared-scout",
+    imgName: "zander-prepared-scout.jpg",
     lineage: "",
   },
   {
@@ -77,7 +77,7 @@ export const level1 = [
     element: "wind",
     hp: 19,
     img: vanitas,
-    imgName: "vanitas-obliviate-schemer",
+    imgName: "vanitas-obliviate-schemer.jpg",
     lineage: "",
   },
 ];

@@ -21,7 +21,7 @@ export const level2 = [
     element: "fire",
     hp: 22,
     img: polkhawk,
-    imgName: "polkhawk-bombastic-shot",
+    imgName: "polkhawk-bombastic-shot.jpg",
     lineage: "",
   },
   {
@@ -30,7 +30,7 @@ export const level2 = [
     element: "norm",
     hp: 22,
     img: allen,
-    imgName: "allen-beast-beckoner",
+    imgName: "allen-beast-beckoner.jpg",
     lineage: "",
   },
   {
@@ -39,7 +39,7 @@ export const level2 = [
     element: "norm",
     hp: 22,
     img: arisanna,
-    imgName: "arisanna-master-alchemist",
+    imgName: "arisanna-master-alchemist.jpg",
     lineage: "Arisanna",
   },
   {
@@ -48,7 +48,7 @@ export const level2 = [
     element: "norm",
     hp: 22,
     img: diana,
-    imgName: "diana-deadly-duelist",
+    imgName: "diana-deadly-duelist.jpg",
     lineage: "Diana",
   },
   {
@@ -57,7 +57,7 @@ export const level2 = [
     element: "norm",
     hp: 24,
     img: lorraine,
-    imgName: "lorraine-blademaster",
+    imgName: "lorraine-blademaster.jpg",
     lineage: "Lorraine",
   },
   {
@@ -66,7 +66,7 @@ export const level2 = [
     element: "norm",
     hp: 22,
     img: merlin,
-    imgName: "merlin-memory-thief",
+    imgName: "merlin-memory-thief.jpg",
     lineage: "",
   },
   {
@@ -75,7 +75,7 @@ export const level2 = [
     element: "norm",
     hp: 24,
     img: mordred,
-    imgName: "mordred-flawless-blade",
+    imgName: "mordred-flawless-blade.jpg",
     lineage: "",
   },
   {
@@ -84,7 +84,7 @@ export const level2 = [
     element: "norm",
     hp: 22,
     img: rai,
-    imgName: "rai-archmage",
+    imgName: "rai-archmage.jpg",
     lineage: "Rai",
   },
   {
@@ -93,7 +93,7 @@ export const level2 = [
     element: "norm",
     hp: 22,
     img: silvie,
-    imgName: "silvie-with-the-pack",
+    imgName: "silvie-with-the-pack.jpg",
     lineage: "Silvie",
   },
   {
@@ -102,7 +102,7 @@ export const level2 = [
     element: "norm",
     hp: 25,
     img: tonoris,
-    imgName: "tonoris-might-of-humanity",
+    imgName: "tonoris-might-of-humanity.jpg",
     lineage: "Tonoris",
   },
   {
@@ -111,7 +111,7 @@ export const level2 = [
     element: "norm",
     hp: 22,
     img: tristan,
-    imgName: "tristan-grim-stalker",
+    imgName: "tristan-grim-stalker.jpg",
     lineage: "",
   },
   {
@@ -120,7 +120,7 @@ export const level2 = [
     element: "norm",
     hp: 22,
     img: zanderAlwaysWatching,
-    imgName: "zander-always-watching",
+    imgName: "zander-always-watching.jpg",
     lineage: "Zander",
   },
   {
@@ -129,7 +129,7 @@ export const level2 = [
     element: "norm",
     hp: 22,
     img: zanderDeftExecutor,
-    imgName: "zander-deft-executor",
+    imgName: "zander-deft-executor.jpg",
     lineage: "Zander",
   },
   {
@@ -138,7 +138,7 @@ export const level2 = [
     element: "water",
     hp: 25,
     img: nico,
-    imgName: "nico-whiplash-allure",
+    imgName: "nico-whiplash-allure.jpg",
     lineage: "",
   },
   {
@@ -147,7 +147,7 @@ export const level2 = [
     element: "wind",
     hp: 22,
     img: vanitas,
-    imgName: "vanitas-convergent-ruin",
+    imgName: "vanitas-convergent-ruin.jpg",
     lineage: "Vanitas",
   },
 ];
