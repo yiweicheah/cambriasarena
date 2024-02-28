@@ -18,7 +18,7 @@ export const level0 = [
     element: "fire",
     hp: 15,
     img: aithne,
-    imgName: "aithne-spirit-of-fire",
+    imgName: "aithne-spirit-of-fire.jpg",
     lineage: "",
   },
   {
@@ -27,7 +27,7 @@ export const level0 = [
     element: "fire",
     hp: 15,
     img: fire,
-    imgName: "spirit-of-fire",
+    imgName: "spirit-of-fire.jpg",
     lineage: "",
   },
   {
@@ -36,7 +36,7 @@ export const level0 = [
     element: "fire",
     hp: 15,
     img: sereneFire,
-    imgName: "spirit-of-serene-fire",
+    imgName: "spirit-of-serene-fire.jpg",
     lineage: "",
   },
   {
@@ -45,7 +45,7 @@ export const level0 = [
     element: "water",
     hp: 15,
     img: sabrina,
-    imgName: "sabrina-spirit-of-water",
+    imgName: "sabrina-spirit-of-water.jpg",
     lineage: "",
   },
   {
@@ -54,7 +54,7 @@ export const level0 = [
     element: "water",
     hp: 15,
     img: water,
-    imgName: "spirit-of-water",
+    imgName: "spirit-of-water.jpg",
     lineage: "",
   },
   {
@@ -63,7 +63,7 @@ export const level0 = [
     element: "water",
     hp: 15,
     img: sereneWater,
-    imgName: "spirit-of-serene-water",
+    imgName: "spirit-of-serene-water.jpg",
     lineage: "",
   },
   {
@@ -72,7 +72,7 @@ export const level0 = [
     element: "wind",
     hp: 15,
     img: gwendolyn,
-    imgName: "gwendolyn-spirit-of-wind",
+    imgName: "gwendolyn-spirit-of-wind.jpg",
     lineage: "",
   },
   {
@@ -81,7 +81,7 @@ export const level0 = [
     element: "wind",
     hp: 15,
     img: wind,
-    imgName: "spirit-of-wind",
+    imgName: "spirit-of-wind.jpg",
     lineage: "",
   },
   {
@@ -90,7 +90,7 @@ export const level0 = [
     element: "wind",
     hp: 15,
     img: sereneWind,
-    imgName: "spirit-of-serene-wind",
+    imgName: "spirit-of-serene-wind.jpg",
     lineage: "",
   },
   {
@@ -99,7 +99,7 @@ export const level0 = [
     element: "norm",
     hp: 15,
     img: morrigan,
-    imgName: "morrigan-lost-spirit",
+    imgName: "morrigan-lost-spirit.jpg",
     lineage: "",
   },
   {
@@ -108,7 +108,7 @@ export const level0 = [
     element: "norm",
     hp: 15,
     img: lost,
-    imgName: "lost-spirit",
+    imgName: "lost-spirit.jpg",
     lineage: "",
   },
   {
@@ -117,7 +117,7 @@ export const level0 = [
     element: "norm",
     hp: 15,
     img: prismatic,
-    imgName: "prismatic-spirit",
+    imgName: "prismatic-spirit.jpg",
     lineage: "",
   },
 ];

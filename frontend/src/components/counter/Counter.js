@@ -30,6 +30,7 @@ const Counter = () => {
     damaged: 0,
     healed: 0,
     attribute: [],
+    dealtDmg: 0,
   });
   const [player2, setPlayer2] = useState({
     level0: null,
@@ -39,13 +40,29 @@ const Counter = () => {
     damaged: 0,
     healed: 0,
     attribute: [],
+    dealtDmg: 0,
   });
   const [currentChampions, setCurrentChampions] = useState({
-    player1: { level: -1, img: add, hp: 0 },
-    player2: { level: -1, img: add, hp: 0 },
+    player1: { level: -1, img: add, hp: 0, imgName: "add.webp" },
+    player2: { level: -1, img: add, hp: 0, imgName: "add.webp" },
   });
   /********************************************************/
+  useEffect(() => {
+    if (player1.dealtDmg < 0) {
+      setPlayer1({ ...player1, dealtDmg: 0 });
+    }
+    if (player1.dealtDmg > currentChampions.player1.hp) {
+      setPlayer1({ ...player1, dealtDmg: currentChampions.player1.hp });
+    }
+    if (player2.dealtDmg < 0) {
+      setPlayer2({ ...player2, dealtDmg: 0 });
+    }
+    if (player2.dealtDmg > currentChampions.player2.hp) {
+      setPlayer2({ ...player2, dealtDmg: currentChampions.player2.hp });
+    }
+  }, [player1, player2, currentChampions]);
 
+  /********************************************************/
   /*handler to show champions list*/
   useEffect(() => {
     let list0 = [];
@@ -145,16 +162,22 @@ const Counter = () => {
 
   /****handler for receiving damage****/
   const handleDamage = (player, setPlayer) => {
-    setPlayer({ ...player, damaged: (player.damaged += 1) });
+    setPlayer({
+      ...player,
+      damaged: (player.damaged += 1),
+      dealtDmg: (player.dealtDmg += 1),
+    });
   };
 
   /****handler for receiving heal****/
   const handleHeal = (player, setPlayer) => {
-    setPlayer({ ...player, healed: (player.healed += 1) });
+    setPlayer({
+      ...player,
+      healed: (player.healed += 1),
+      dealtDmg: (player.dealtDmg -= 1),
+    });
   };
   /********************************************************/
-
-  /****handler for receiving heal****/
   const handleReset = () => {
     const defaultPlayer = {
       level0: null,
@@ -163,10 +186,11 @@ const Counter = () => {
       level3: null,
       damaged: 0,
       healed: 0,
+      dealtDmg: 0,
       attribute: [],
     };
 
-    const defaultChampion = { level: -1, img: add, hp: 0 };
+    const defaultChampion = { level: -1, img: add, hp: 0, imgName: "add.webp" };
 
     setPlayer1(defaultPlayer);
     setPlayer2(defaultPlayer);

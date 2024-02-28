@@ -21,7 +21,7 @@ export const level3 = [
     element: "arcane",
     hp: 25,
     img: raiManaWeaver,
-    imgName: "rai-mana-weaver",
+    imgName: "rai-mana-weaver.jpg",
     lineage: "Rai",
   },
   {
@@ -30,7 +30,7 @@ export const level3 = [
     element: "arcane",
     hp: 25,
     img: raiStormSeer,
-    imgName: "rai-storm-seer",
+    imgName: "rai-storm-seer.jpg",
     lineage: "Rai",
   },
   {
@@ -39,7 +39,7 @@ export const level3 = [
     element: "astra",
     hp: 25,
     img: arisannaAstralZenith,
-    imgName: "arisanna-astral-zenith",
+    imgName: "arisanna-astral-zenith.jpg",
     lineage: "Arisanna",
   },
   {
@@ -48,7 +48,7 @@ export const level3 = [
     element: "astra",
     hp: 25,
     img: arisannaLucentArbiter,
-    imgName: "arisanna-lucent-arbiter",
+    imgName: "arisanna-lucent-arbiter.jpg",
     lineage: "Arisanna",
   },
   {
@@ -57,7 +57,7 @@ export const level3 = [
     element: "crux",
     hp: 28,
     img: lorraineCruxKnight,
-    imgName: "lorraine-crux-knight",
+    imgName: "lorraine-crux-knight.jpg",
     lineage: "Lorraine",
   },
   {
@@ -66,7 +66,7 @@ export const level3 = [
     element: "crux",
     hp: 28,
     img: lorraineSpiritRuler,
-    imgName: "lorraine-spirit-ruler",
+    imgName: "lorraine-spirit-ruler.jpg",
     lineage: "Lorraine",
   },
   {
@@ -75,7 +75,7 @@ export const level3 = [
     element: "crux",
     hp: 28,
     img: merlinKingslayer,
-    imgName: "merlin-kingslayer",
+    imgName: "merlin-kingslayer.jpg",
     lineage: "Merlin",
   },
   {
@@ -84,7 +84,7 @@ export const level3 = [
     element: "luxem",
     hp: 25,
     img: zanderBlindingSteel,
-    imgName: "zander-blinding-steel",
+    imgName: "zander-blinding-steel.jpg",
     lineage: "Zander",
   },
   {
@@ -93,7 +93,7 @@ export const level3 = [
     element: "luxem",
     hp: 25,
     img: zanderCoharzisChosen,
-    imgName: "zander-corhazis-chosen",
+    imgName: "zander-corhazis-chosen.jpg",
     lineage: "Zander",
   },
   {
@@ -102,7 +102,7 @@ export const level3 = [
     element: "neos",
     hp: 30,
     img: tonorisCreationsWill,
-    imgName: "tonoris-creations-will",
+    imgName: "tonoris-creations-will.jpg",
     lineage: "Tonoris",
   },
   {
@@ -111,7 +111,7 @@ export const level3 = [
     element: "neos",
     hp: 30,
     img: tonorisGenesisAegis,
-    imgName: "tonoris-genesis-aegis",
+    imgName: "tonoris-genesis-aegis.jpg",
     lineage: "Tonoris",
   },
   {
@@ -120,7 +120,7 @@ export const level3 = [
     element: "tera",
     hp: 25,
     img: silvieEarthsTune,
-    imgName: "silvie-earths-tune",
+    imgName: "silvie-earths-tune.jpg",
     lineage: "Silvie",
   },
   {
@@ -129,7 +129,7 @@ export const level3 = [
     element: "tera",
     hp: 25,
     img: silvieLovedByAll,
-    imgName: "silvie-loved-by-all",
+    imgName: "silvie-loved-by-all.jpg",
     lineage: "Silvie",
   },
   {
@@ -138,7 +138,7 @@ export const level3 = [
     element: "umbra",
     hp: 25,
     img: dianaCursebreaker,
-    imgName: "diana-cursebreaker",
+    imgName: "diana-cursebreaker.jpg",
     lineage: "Diana",
   },
   {
@@ -147,7 +147,7 @@ export const level3 = [
     element: "umbra",
     hp: 25,
     img: dianaDuskstalker,
-    imgName: "diana-duskstalker",
+    imgName: "diana-duskstalker.jpg",
     lineage: "Diana",
   },
 ];

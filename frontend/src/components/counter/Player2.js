@@ -1,12 +1,12 @@
 import "./Players.css";
 import { Group, Modal } from "@mantine/core";
-import useScreenSize from "../../hooks/useScreenSize";
 import { useState } from "react";
 
 import swords from "./images/sword.png";
 import heal from "./images/regeneration.png";
 import undo from "./images/undo.png";
 import add from "./images/add.webp";
+import level from "./images/level.png";
 
 const Player2 = ({
   player2,
@@ -17,8 +17,6 @@ const Player2 = ({
   setCurrentChampions,
   championsListToShow,
 }) => {
-  const screenSize = useScreenSize();
-
   /*modal handler*/
   const [openedList, setOpenedList] = useState(false);
   const openList = () => setOpenedList(true);
@@ -26,9 +24,9 @@ const Player2 = ({
   /********************************************************/
 
   /*image style for champion*/
-  const championImgStyle = {
-    height: `${(screenSize.height - 70) / 2 - 100}px`,
-  };
+  // const championImgStyle = {
+  //   height: `${(screenSize.height - 70) / 2 - 100}px`,
+  // };
   /********************************************************/
 
   /*handler for image click*/
@@ -47,7 +45,7 @@ const Player2 = ({
       if (currentChampions.player2.level === 0) {
         setCurrentChampions({
           ...currentChampions,
-          player2: { level: -1, img: add, hp: 0 },
+          player2: { level: -1, img: add, hp: 0, imgName: "add.webp" },
         });
         setPlayer2({ ...player2, level0: null });
       }
@@ -99,21 +97,28 @@ const Player2 = ({
     closeList();
   };
 
+  console.log(currentChampions);
+
   return (
     <div className="players-outer-div">
-      <div className="players-div player2">
+      <div className={`players-div player2`}>
+        <img
+          src={require(`../../data/champions/images/${currentChampions.player2.imgName}`)}
+          alt="champion"
+          className="players-champion-bg player2"
+        />
         <Modal.Root
           opened={openedList}
           onClose={closeList}
           centered
           zIndex="1000"
-          className="champions-list-modal"
+          className="champions-list-modal mobile"
         >
           <Modal.Overlay />
-          <Modal.Content className={`champions-list-content `} radius="15">
+          <Modal.Content className={`champions-list-content`} radius="15">
             <Modal.Header>
               <Modal.Title className="champions-list-player">
-                Player 2
+                Player 1
               </Modal.Title>
               <Modal.CloseButton />
             </Modal.Header>
@@ -136,39 +141,43 @@ const Player2 = ({
         </Modal.Root>
         <Group gap="0" className="players-group">
           <div className="players-box left">
-            <img
-              src={currentChampions.player2.img}
-              alt="add"
-              className={`players-champion-img ${
-                currentChampions.player2.level === 3 ? "level3" : ""
+            <div
+              className={`button-border ${
+                currentChampions.player2.level === 3 ? "hide" : "show"
               }`}
-              style={championImgStyle}
               onClick={handleImgClick}
-            />
-            <img
-              src={undo}
-              alt="undo"
-              className={`champion-delevel ${
+            >
+              <img src={level} alt="level" className="button-icon" />
+            </div>
+            <div
+              className={`button-border ${
                 currentChampions.player2.level === -1 ? "hide" : "show"
               }`}
               onClick={handleDelevel}
-            />
+            >
+              <img src={undo} alt="level" className="button-icon" />
+            </div>
+          </div>
+          <div className="players-box mid">
+            <Group gap="0" className="players-hp-div">
+              <div className="players-hp">{player2.dealtDmg}</div>
+              <div className="players-max-hp">
+                /{currentChampions.player2.hp}
+              </div>
+            </Group>
           </div>
           <div className="players-box right">
             <div
-              className="heal-atk-border"
-              onClick={() => handleHeal(player2, setPlayer2)}
-            >
-              <img src={heal} alt="heal" className="heal-atk-icon heal" />
-            </div>
-            <div className="players-hp">
-              {currentChampions.player2.hp - player2.damaged + player2.healed}
-            </div>
-            <div
-              className="heal-atk-border"
+              className="button-border player2"
               onClick={() => handleDamage(player2, setPlayer2)}
             >
-              <img src={swords} alt="attack" className="heal-atk-icon atk" />
+              <img src={swords} alt="attack" className="button-icon" />
+            </div>
+            <div
+              className="button-border player2"
+              onClick={() => handleHeal(player2, setPlayer2)}
+            >
+              <img src={heal} alt="heal" className="button-icon heal" />
             </div>
           </div>
         </Group>
